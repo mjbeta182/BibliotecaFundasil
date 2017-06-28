@@ -27,8 +27,8 @@ function mostrarDatos($bdConexion)
 
 	//Devuelve los resultados de la base de datos que se mostraran en la pagina
 	$sqlMostrar='SELECT l.idLibro,
-						l.titulo,
-						c.nombreCategoria
+                                l.titulo,
+                                c.nombreCategoria
 				FROM libro l
 				INNER JOIN categoria c
 				ON l.idCategoria = c.idCategoria 
@@ -56,7 +56,7 @@ function mostrarDatos($bdConexion)
 					<a href='frmCategoria.php?accion=editar'>
 					<button type='submit' class='btn btn-warning boton'>Editar</button>
 					</a>
-					<a href='tblCategoria.php?accion=eliminar' 
+					<a href='tblLibros.php?accion=eliminar' 
 					onclick='return eliminarItem();'>
 					<button type='submit' class='btn btn-danger boton'>Eliminar</button>
 					</a>
@@ -65,27 +65,27 @@ function mostrarDatos($bdConexion)
 	}//Fin While
 
 	//Despliega los links para paginacion
-
 	print'<tr><td colspan="4" id="pagination"><ul class="pagination">';
 
 		if($pag>1 && $pag>0)
 		{
-			print'<li><a id="pag" class="fa fa-angle-double-left" href="tblLibros.php?pag=' . ($pag-5).'"></a></li>';
-		
+                        if($pag>5)
+                        {print'<li><a id="pag" class="fa fa-angle-double-left" href="tblLibros.php?pag=' . ($pag-5).'"></a></li>';}	
 			print '<li><a id="pag" class=" 	fa fa-angle-left" href="tblLibros.php?pag=' . ($pag-1) . '"></a></li>';
 		}
 
-	       	print '<li><a id="link" href="tblLibros.php?pag=' . $pag . '">' . $pag .' / '. $num .'</a></li>
-			 ';	
+	       	print '<li><a id="link" href="tblLibros.php?pag=' . $pag . '">' . $pag .' / '. $num .'</a></li>';	
 
 		if($pag<$num)
 		{
 			print'<li><a id="pag" class=" 	fa fa-angle-right" href="tblLibros.php?pag=' . ($pag+1).'"></a></li>';
-			print'<li><a id="pag" class="fa fa-angle-double-right" href="tblLibros.php?pag=' . ($pag+5).'"></a></li>';
+                      if($pag=$num-5){
+			print'<li><a id="pag" class="fa fa-angle-double-right" href="tblLibros.php?pag=' . ($pag+5).'"></a></li>';}
 		}
 	
 	print '</ul></td></tr></tbody>';
 	}//Fin del metodo mostrar
 
+        
 ?>
             

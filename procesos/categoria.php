@@ -1,7 +1,6 @@
 <?php
 include('../clases/conexion.php');
-
-
+//descripcion
 $hCodigo	= (isset($_REQUEST['hCodigo'])?$_REQUEST['hCodigo']:null);
 $txtCategoria	= (isset($_REQUEST['txtCategoria'])?$_REQUEST['txtCategoria']:null);
 
@@ -28,13 +27,12 @@ function mostrarDatos($bdConexion)
 	$sqlMostrar='SELECT * FROM categoria LIMIT ' . $primer_indice . ',' .  $cantidad_por_pagina;
 	$rsMostrar = $bdConexion->ejecutarSql($sqlMostrar);
 
-
 	print '	<thead>
-	 		<tr>
+	 	<tr>
 	            <th>Código</th>
 	            <th>Nombre </th>
-	   			<th id="cla">Acciones</th> 
-	 		</tr>
+                    <th id="cla">Acciones</th> 
+	 	</tr>
 	       	</thead>';
 	while($fila = mysqli_fetch_array($rsMostrar)) {
 	  print "<tbody>
@@ -54,11 +52,19 @@ function mostrarDatos($bdConexion)
 	}//Fin While
 
 	//Despliega los links para paginacion
-	print'<tr><td colspan="3" id="pagination"><ul class="pagination">';
-	for ($pag=1;$pag<=$num;$pag++) {
-	 print '<li><a id="link" href="tblCategoria.php?pag=' . $pag . '">' . $pag . '</a></li>';	
-	}
-	print'</ul></td></tr></tbody>';
+	print'<tr><td colspan="4" id="pagination"><ul class="pagination">';
+            if($pag>1 && $pag>0)
+            {	
+                    print '<li><a id="pag" class=" 	fa fa-angle-left" href="tblCategoria.php?pag=' . ($pag-1) . '"></a></li>';
+            }
+
+            print '<li><a id="link" href="tblCategoria.php?pag=' . $pag . '">' . $pag .' / '. $num .'</a></li>';	
+
+            if($pag<$num)
+            {
+                    print'<li><a id="pag" class=" 	fa fa-angle-right" href="tblCategoria.php?pag=' . ($pag+1).'"></a></li>';
+            }
+	print '</ul></td></tr></tbody>';
 	}//Fin del metodo mostrar
 
 ?>
