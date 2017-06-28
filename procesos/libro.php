@@ -78,10 +78,19 @@ function mostrarDatos($bdConexion)
 
 		if($pag<$num)
 		{
-			print'<li><a id="pag" class=" 	fa fa-angle-right" href="tblLibros.php?pag=' . ($pag+1).'"></a></li>';
-                      if($pag=$num-5){
-			print'<li><a id="pag" class="fa fa-angle-double-right" href="tblLibros.php?pag=' . ($pag+5).'"></a></li>';}
-		}
+                      print'<li><a id="pag" class=" 	fa fa-angle-right" href="tblLibros.php?pag=' . ($pag+1).'"></a></li>';
+                      
+                      if ($pag>=$num-5)
+                      {
+                        $n = $num-$pag;
+			print'<li><a id="pag" class="fa fa-angle-double-right" href="tblLibros.php?pag=' . ($pag+$n).'"></a></li>'; 
+                      }
+                        else
+                        {
+                            print'<li><a id="pag" class="fa fa-angle-double-right" href="tblLibros.php?pag=' . ($pag+5).'"></a></li>';
+                        }
+                        
+                      }
 	
 	print '</ul></td></tr></tbody>';
 	}//Fin del metodo mostrar
