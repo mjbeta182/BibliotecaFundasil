@@ -21,10 +21,12 @@ class plantilla
 			<title>Biblioteca FUNDASIL</title>
 			 <link href="../css/bootstrap.min.css" rel="stylesheet">
 			 <link href="../css/shop-homepage.css" rel="stylesheet">
+                         <link href="../css/jquery-confirm.css" rel="stylesheet">
 		     <script src="../js/jquery.js"></script>
 		     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+		     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+                     <script src="../js/confirmacion.js"></script>
    		 </head>';
 	}
 

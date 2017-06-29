@@ -53,13 +53,17 @@ function mostrarDatos($bdConexion)
 				<td>".$fila['titulo']."</td>
 				<td>".$fila['nombreCategoria']."</td>
 				<td style='text-align:center;'>
-					<a href='frmCategoria.php?accion=editar'>
-					<button type='submit' class='btn btn-warning boton'>Editar</button>
+					<a href='tblLibroEjemplar.php?accion=editar'>
+					<button type='submit' class='btn btn-default boton'>Ejemplares</button>
 					</a>
+                                        <a href='frmEjemplar.php?titulo=".$fila['titulo']."&idLibro=".$fila['idLibro']."'>
+					<button type='submit' class='btn btn-warning boton'>Agregar Ejemplar</button>
+					</a>
+                                        <!--Elimina libros y todos sus ejemplares-->
 					<a href='tblLibros.php?accion=eliminar' 
 					onclick='return eliminarItem();'>
-					<button type='submit' class='btn btn-danger boton'>Eliminar</button>
-					</a>
+					<button type='submit' class='btn btn-danger boton' title='Elimina todos los ejemplares del libro seleccionado' >Eliminar</button>
+					</a> 
 				</td>
 			   </tr> "; 
 	}//Fin While

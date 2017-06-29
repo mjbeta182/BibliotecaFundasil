@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 include ('../plantilla/plantilla.php');
-include('../procesos/autores.php');
+include('../procesos/biblioteca.php');
 $interfaz = new plantilla();
 $interfaz->header();
 $interfaz->barraNavegacion();
@@ -13,13 +13,13 @@ $interfaz->barraNavegacion();
 <div class="row">
     <div class="col-md-12">
      <h3 class="text-center text-muted pull-left">
-        <strong>AUTORES</strong>
+        <strong>BIBLIOTECAS</strong>
      </h3>
     <table class="tbl">
         <tr>
         <td>
-            <a href="frmAutores.php">
-                <button type="submit" class="btn btn-primary">Agregar Autor</button>
+            <a href="frmBiblioteca.php">
+                <button type="submit" class="btn btn-primary">Agregar Biblioteca</button>
             </a>     
         </td>
         <td class="pull-right"> 
@@ -45,3 +45,5 @@ $bdConexion->desconectar();
 ?>
 </body>
 </html>
+
+
