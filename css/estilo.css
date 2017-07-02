@@ -2,6 +2,7 @@ body{
 	background: white;
 	background-repeat: no-repeat;
 	background-attachment: fixed;	
+
 }
 
 .thumbnail{
@@ -24,7 +25,8 @@ a .boton{height:30px;font-size:12px;padding-left:8px; padding-right:8px;}
 h3{padding-top: 15px;padding-bottom: 20px;}
 #link{color: black;}
 #cla{text-align: center;}
-#pagination{text-align:center;}
-#busqueda{width:50%;}
 #char{color:#A4A4A4;}
 #pag{ color: black;}
+#agregar{padding-bottom: 20px;}
+#contenido{margin-top: 25px;}
+#lista{padding-bottom: 25px;}

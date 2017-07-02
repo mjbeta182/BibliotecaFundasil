@@ -17,24 +17,27 @@ class plantilla
 			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<meta name="description" content="">
 			<meta name="author" content="">
+            <title>Biblioteca FUNDASIL</title>
 
-			
-			<title>Biblioteca FUNDASIL</title>
+            <!-- Archivos de Estilo css -->
             <link rel="stylesheet" href="../css/estilo.css">
-			<link rel="stylesheet" href="../css/bootstrap.min.css" >
 			<link href="../css/shop-homepage.css" rel="stylesheet">
-             <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-             <!-- verificar-->
-            <link href="../css/jquery-confirm.css" rel="stylesheet">
+            <!-- Librerias js -->
+            <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="../js/bootstrap.js"></script>
+            <script src="../js/confirmacion.js"></script>
+            <script type="text/javascript" src="../js/funciones.js"></script>
+             <script type="text/javascript"  src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+            <script type="text/javascript"  src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+
+
+
             
-			<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-             <script src="../js/confirmacion.js"></script>
-             <script type="text/javascript" src="../js/funciones.js"></script>
-              <script type="text/javascript"  src=" https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-              <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-
+            
               		<!-- Llamado y opciones de librerías -->
                      <script src="../js/script.js"></script>
 

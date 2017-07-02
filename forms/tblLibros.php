@@ -2,12 +2,10 @@
 <html lang="en">
 <?php
 include ('../plantilla/plantilla.php');
-include('../procesos/libro.php');
 $interfaz = new plantilla();
 $interfaz->header();
 $interfaz->barraNavegacion();
 ?>
-<!--***********************************************************************************************-->
 <body  >
 <div class="container"   >
 <div class="row">
@@ -17,30 +15,17 @@ $interfaz->barraNavegacion();
         </h3>
         <table class="tbl">
             <tr>
-            <td><form action="frmLibro.php" method="GET" >
-                <button type="submit" class="btn btn-primary pull-left">Agregar Libro</button>
+            <td>
+                <form action="frmLibro.php" method="GET" >
+                    <buttontype="submit" class="btn btn-primary pull-left">Agregar Libro</button>
+                    <input type="hidden" id="tabla" name="tabla" value="libro">
                 </form>
             </td>
-            <td class="pull-right"> 
-                <select class="form-control ">
-                 <option>Buscar por...</option>
-                </select>
-            </td>
-             <td class="pull-right" id="busqueda">
-                <input  type="text" class="form-control" placeholder="Buscar">
-            </td>
-            </tr>
         </table><br>
-        <table class="table table-condensed">
-             <?php mostrarDatos($bdConexion); ?> 
-        </table>
+          <article id="contenido"></article>
     </div><!--Fin col-md-12-->
 </div><!--Fin row-->   
 </div><!--Fin Container-->
-<!--**************************************************************************************************-->
-<?php  
-$interfaz->footer();
-$bdConexion->desconectar();
-?>
+<?php  $interfaz->footer(); ?>
 </body>
 </html>

@@ -6,8 +6,7 @@ $interfaz = new plantilla();
 $interfaz->header();
 $interfaz->barraNavegacion();
 ?>
-<!--***********************************************************************************************-->
-<body  >
+<body>
 <div class="container"   >
 <div class="row">
     <div class="col-md-12">
@@ -16,21 +15,18 @@ $interfaz->barraNavegacion();
         </h3>
         <table class="tbl">
             <tr>
-            <td><form action="frmCategoria.php" method="GET" >
+            <td>
+                <form action="frmCategoria.php" method="GET" >
                 <button type="submit" class="btn btn-primary pull-left">Agregar Categoría</button>
                 <input type="hidden" id="tabla" name="tabla" value="categoria">
                 </form>
             </td>
             </tr>
-        </table><br>
+        </table>
          <article id="contenido"></article>
     </div><!--Fin col-md-12-->
 </div><!--Fin row-->   
 </div><!--Fin Container-->
-<!--**************************************************************************************************-->
-<?php  
-$interfaz->footer();
-
-?>
+<?php  $interfaz->footer(); ?>
 </body>
 </html>
