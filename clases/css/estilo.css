@@ -1,0 +1,30 @@
+body{
+	background: white;
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+}
+
+.thumbnail{
+  background: transparent;
+}
+.form-wrap {
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+form{text-align: center;}
+#combobox{width: 100%;}
+#tituloLibro{margin-top: 20px;}
+/*TABLAS*/
+a .boton{height:30px;font-size:12px;padding-left:8px; padding-right:8px;}
+.tbl{width:100%;}
+h3{padding-top: 15px;padding-bottom: 20px;}
+#link{color: black;}
+#cla{text-align: center;}
+#pagination{text-align:center;}
+#busqueda{width:50%;}
+#char{color:#A4A4A4;}
+#pag{ color: black;}
