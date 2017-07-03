@@ -8,6 +8,7 @@ $txtNombre	= (isset($_REQUEST['txtNombre'])?$_REQUEST['txtNombre']:null);
 $accion   	= (isset($_REQUEST['accion'])?$_REQUEST['accion']:'insert');
 $txtBuscar 	= (isset($_REQUEST['txtBuscar'])?$_REQUEST['txtBuscar']:null);
 
+
 if (isset($_REQUEST['btnGuardar']))
 {
 		if ($accion=='insert')

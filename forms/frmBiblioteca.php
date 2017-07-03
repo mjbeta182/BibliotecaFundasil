@@ -9,6 +9,9 @@ $interfaz->barraNavegacion();
 ?>
 <!--**************************************************************************************************-->
  <body>
+ <script type="text/javascript">
+     alert("PRUEBA");
+ </script>>
 <div class="container">
 <div class="row3">
     <h3 class="text-center text-muted">
@@ -25,7 +28,7 @@ $interfaz->barraNavegacion();
             <br>
                 <button type="submit" class="btn btn-primary" name="btnGuardar">Guardar</button>
                 <a href="tblBiblioteca.php" id="btnCancelar" class="btn btn-warning">Cancelar</a>
-            <input type="hidden" id="accion" name="accion" value="<?=$accion?>" >
+                 <input type="hidden" id="accion" name="accion" value="<?=$accion?>" >
         </form>
     </div>
 </div><!--Fin row3-->

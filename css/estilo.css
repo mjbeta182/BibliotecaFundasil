@@ -3,6 +3,7 @@ body{
 	background-repeat: no-repeat;
 	background-attachment: fixed;	
 
+
 }
 
 .thumbnail{
@@ -28,5 +29,6 @@ h3{padding-top: 15px;padding-bottom: 20px;}
 #char{color:#A4A4A4;}
 #pag{ color: black;}
 #agregar{padding-bottom: 20px;}
-#contenido{margin-top: 25px;}
-#lista{padding-bottom: 25px;}
+#contenido{margin-top: 4px;}
+#lista{padding-bottom: 5px;}
+#lista_paginate{text-align: center; margin-left: -75%; margin-top: 2%; } 

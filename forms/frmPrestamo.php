@@ -2,6 +2,7 @@
 <html lang="en">
 <?php
 include ('../plantilla/plantilla.php');
+include ('../procesos/prestamo.php');
 $interfaz = new plantilla();
 $interfaz->header();
 $interfaz->barraNavegacion();
@@ -14,13 +15,13 @@ $interfaz->barraNavegacion();
         <strong>PRESTAMO</strong>
     </h3>
     <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 form-wrap">
-        <form  action="#" method="GET">
-        <label>"Nombre de libro"</label>
+        <form  action="tblPrestamo.php" method="GET">
+        <label><?=$Titulo_de_libro?></label>
             <br><br>
             <div class="input-group" id="combobox">
-                 <select class="form-control " >
-                     <option>..Lector..</option>
-                 </select>
+                 <?php
+                        $bdConexion->llenarSelect("slcLector","SELECT idPersona,nombre FROM persona  ",$slcLector);
+                 ?>
             </div>
             <br>
             <div class='input-group date' id='datetimepicker1'>
@@ -36,9 +37,6 @@ $interfaz->barraNavegacion();
     </div>
 </div><!--Fin row3-->
 </div><!--Fin Container-->
-<!--**************************************************************************************************-->
-<?php  
-$interfaz->footer();
-?>
+<?php  $interfaz->footer();?>
 </body>
 </html>

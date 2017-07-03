@@ -17,8 +17,9 @@ $interfaz->barraNavegacion();
             <tr>
             <td>
                 <form action="frmLibro.php" method="GET" >
-                    <buttontype="submit" class="btn btn-primary pull-left">Agregar Libro</button>
+                    <button type="submit" class="btn btn-primary pull-left">Agregar Libro</button>
                     <input type="hidden" id="tabla" name="tabla" value="libro">
+                    <input type="hidden" id="id" value="0">
                 </form>
             </td>
         </table><br>
